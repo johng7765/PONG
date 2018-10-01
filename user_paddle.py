@@ -8,10 +8,10 @@ import pygame
 from pygame.sprite import Sprite
 
 
-class Paddle_Top(Sprite):
+class PaddleTop(Sprite):
     def __init__(self, ai_settings, screen):
         """Initialize the paddle and set its starting position"""
-        super(Paddle_Top, self).__init__()
+        super(PaddleTop, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
@@ -50,10 +50,10 @@ class Paddle_Top(Sprite):
         self.screen.blit(self.image, self.rect)
 
 
-class Paddle_Left(Sprite):
+class PaddleLeft(Sprite):
     def __init__(self, ai_settings, screen):
         """Initialize the paddle and set its starting position"""
-        super(Paddle_Left, self).__init__()
+        super(PaddleLeft, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
@@ -92,10 +92,10 @@ class Paddle_Left(Sprite):
         self.screen.blit(self.image, self.rect)
 
 
-class Paddle_Bottom(Sprite):
+class PaddleBottom(Sprite):
     def __init__(self, ai_settings, screen):
         """Initialize the paddle and set its starting position"""
-        super(Paddle_Bottom, self).__init__()
+        super(PaddleBottom, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 

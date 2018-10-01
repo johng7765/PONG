@@ -7,11 +7,11 @@
 import pygame.font
 
 
-class Scoreboard():
+class Scoreboard:
     """A class to report scoring information."""
 
     def __init__(self, ai_settings, screen, stats):
-        """Initialize scorekeeping attributes."""
+        """Initialize score keeping attributes."""
         self.screen = screen
         self.screen_rect = screen.get_rect()
         self.ai_settings = ai_settings
@@ -24,11 +24,13 @@ class Scoreboard():
         # Prepare the initial Level image.
         self.prep_computer_score()
         self.prep_player_score()
+        self.prep_winning_score()
 
     def prep_computer_score(self):
         """Turn the computer score into a rendered image."""
         computer_score_str = "C.Score: " + str(self.stats.computer_score)
-        self.computer_score_image = self.font.render(computer_score_str, True, self.text_color, self.ai_settings.bg_color)
+        self.computer_score_image = self.font.render(computer_score_str, True, self.text_color,
+                                                     self.ai_settings.bg_color)
 
         # Display the level at top right of the screen.
         self.computer_score_rect = self.computer_score_image.get_rect()
@@ -45,7 +47,18 @@ class Scoreboard():
         self.player_score_rect.left = self.screen_rect.left + 20
         self.player_score_rect.top = 20
 
+    def prep_winning_score(self):
+        """Show winning score."""
+        winning_score_str = "15"
+        self.winning_score_image = self.font.render(winning_score_str, True, self.text_color, self.ai_settings.bg_color)
+
+        # Display the winning score at top of the screen.
+        self.winning_score_rect = self.winning_score_image.get_rect()
+        self.winning_score_rect.centerx = self.screen_rect.centerx
+        self.winning_score_rect.top = 20
+
     def show_scores(self):
         """Draw Level to the screen."""
         self.screen.blit(self.computer_score_image, self.computer_score_rect)
         self.screen.blit(self.player_score_image, self.player_score_rect)
+        self.screen.blit(self.winning_score_image, self.winning_score_rect)

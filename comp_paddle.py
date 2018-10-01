@@ -9,16 +9,16 @@ import pygame
 from pygame.sprite import Sprite
 
 
-class Comp_Paddle_Top(Sprite):
+class CompPaddleTop(Sprite):
     """A class to represent a Paddle controlled by the Computer"""
 
     def __init__(self, ai_settings, screen):
         """Initialize the alien and set its starting position."""
-        super(Comp_Paddle_Top, self).__init__()
+        super(CompPaddleTop, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
-        # Load the Comp_Paddle_Top image ands set its rect attribute
+        # Load the CompPaddleTop image ands set its rect attribute
         self.image = pygame.image.load('images/comp_paddle_top_bottom.gif')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
@@ -27,7 +27,7 @@ class Comp_Paddle_Top(Sprite):
         self.rect.x = self.screen_rect.centerx
         self.rect.y = self.screen_rect.top
 
-        # Store the alien's exact position.
+        # Store the exact position.
         self.x = float(self.rect.x)
 
         # Store movement flag
@@ -65,16 +65,16 @@ class Comp_Paddle_Top(Sprite):
         self.screen.blit(self.image, self.rect)
 
 
-class Comp_Paddle_Right(Sprite):
+class CompPaddleRight(Sprite):
     """A class to represent a Paddle controlled by the Computer"""
 
     def __init__(self, ai_settings, screen):
         """Initialize the alien and set its starting position."""
-        super(Comp_Paddle_Right, self).__init__()
+        super(CompPaddleRight, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
-        # Load the Comp_Paddle_Right image ands set its rect attribute
+        # Load the CompPaddleRight image ands set its rect attribute
         self.image = pygame.image.load('images/comp_paddle_right.gif')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
@@ -83,7 +83,7 @@ class Comp_Paddle_Right(Sprite):
         self.rect.right = self.screen_rect.right
         self.rect.y = self.screen_rect.centery
 
-        # Store the alien's exact position.
+        # Store exact position.
         self.y = float(self.rect.y)
 
         # Movement flags
@@ -120,16 +120,16 @@ class Comp_Paddle_Right(Sprite):
         self.screen.blit(self.image, self.rect)
 
 
-class Comp_Paddle_Bottom(Sprite):
+class CompPaddleBottom(Sprite):
     """A class to represent a Paddle controlled by the Computer"""
 
     def __init__(self, ai_settings, screen):
         """Initialize the alien and set its starting position."""
-        super(Comp_Paddle_Bottom, self).__init__()
+        super(CompPaddleBottom, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
-        # Load the Comp_Paddle_Bottom image and set its rect attribute
+        # Load the CompPaddleBottom image and set its rect attribute
         self.image = pygame.image.load('images/comp_paddle_top_bottom.gif')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()

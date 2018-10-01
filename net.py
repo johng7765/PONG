@@ -7,7 +7,7 @@
 import pygame
 
 
-class Net():
+class Net:
     def __init__(self, screen):
         self.screen = screen
 

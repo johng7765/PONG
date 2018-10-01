@@ -39,37 +39,37 @@ class Ball(Sprite):
     def check_user_horizontal_edge(self):
         """Return True if the ball is at edge of screen."""
         screen_rect = self.screen.get_rect()
-        if self.x <= screen_rect.left - 60:
+        if self.x <= screen_rect.left - 40:
             return True
 
     def check_comp_horizontal_edge(self):
         """Return True if the ball is at edge of screen."""
         screen_rect = self.screen.get_rect()
-        if self.x >= screen_rect.right + 60:
+        if self.x >= screen_rect.right + 40:
             return True
 
     def check_user_vertical_top_edge(self):
         """Return True if the ball is at a edge of screen"""
         screen_rect = self.screen.get_rect()
-        if self.y <= (screen_rect.top - 60) and self.x <= (screen_rect.right / 2):
+        if self.y <= (screen_rect.top - 40) and self.x <= (screen_rect.right / 2):
             return True
 
     def check_comp_vertical_top_edge(self):
         """Return True if the ball is at a edge of screen"""
         screen_rect = self.screen.get_rect()
-        if self.y <= (screen_rect.top - 60) and self.x >= (screen_rect.right / 2):
+        if self.y <= (screen_rect.top - 40) and self.x >= (screen_rect.right / 2):
             return True
 
     def check_user_vertical_bottom_edge(self):
         """Return True if the ball is at a edge of screen"""
         screen_rect = self.screen.get_rect()
-        if self.y >= (screen_rect.bottom + 60) and self.x <= (screen_rect.right / 2):
+        if self.y >= (screen_rect.bottom + 40) and self.x <= (screen_rect.right / 2):
             return True
 
     def check_comp_vertical_bottom_edge(self):
         """Return True if the ball is at a edge of screen"""
         screen_rect = self.screen.get_rect()
-        if self.y >= (screen_rect.bottom + 60) and self.x >= (screen_rect.right / 2):
+        if self.y >= (screen_rect.bottom + 40) and self.x >= (screen_rect.right / 2):
             return True
 
     def update(self):

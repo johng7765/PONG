@@ -5,13 +5,15 @@
 #############################
 
 
-class GameStats():
+class GameStats:
     """Track statistics for PONG."""
 
     def __init__(self, ai_settings):
         """Initialize Statistics"""
         self.ai_settings = ai_settings
         self.reset_stats()
+        self.player_score = 0
+        self.computer_score = 0
 
         # Start PONG in an inactive state.
         self.game_active = False

@@ -5,7 +5,7 @@
 #############################
 
 
-class Settings():
+class Settings:
     """A class to store all settings for PONG."""
 
     def __init__(self):
@@ -21,14 +21,23 @@ class Settings():
         self.speedup_scale = 1.1
 
         self.initialize_dynamic_settings()
+        self.user_paddle_speed_factor = None
+        self.comp_paddle_speed_factor = None
+        self.comp_paddle_top_direction = None
+        self.comp_paddle_right_direction = None
+        self.comp_paddle_bottom_direction = None
+        self.ball_x_speed_factor = None
+        self.ball_y_speed_factor = None
+        self.ball_x_direction = None
+        self.ball_y_direction = None
 
     def initialize_dynamic_settings(self):
         """Initialize settings that change throughout the game"""
         # User Paddles settings
-        self.user_paddle_speed_factor = 3.2
+        self.user_paddle_speed_factor = 3.52
 
         # Computer Paddle settings
-        self.comp_paddle_speed_factor = 1
+        self.comp_paddle_speed_factor = 0.47
 
         # comp_paddle_direction of 1 represents rights; -1 represents left
         self.comp_paddle_top_direction = 1
